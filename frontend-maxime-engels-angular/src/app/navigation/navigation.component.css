@@ -1,0 +1,41 @@
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: all .5s;
+  background-color: rgba(32, 30, 37, 0.466);
+  backdrop-filter: blur(16px);
+}
+
+.overlay ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 52%;
+  padding-left: 25%;
+}
+
+.overlay ul li {
+  font-size: 2.4em;
+  font-weight: 500;
+  transition: all .4s;
+  width: fit-content;
+}
+
+.overlay ul li:hover{
+  transform: scale(1.2);
+  color: rgb(122, 0, 192);
+  cursor: pointer;
+}
+
+.active{
+  transform: scale(1.2);
+  color: rgb(192, 0, 176);
+}

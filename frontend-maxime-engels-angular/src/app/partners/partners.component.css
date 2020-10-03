@@ -1,0 +1,76 @@
+.partners {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10%;
+}
+
+.partners h1{
+  margin: 0 15% 2% 15%;
+  font-size: 2.5em;
+}
+
+.row h3{
+  font-family: 'fira sans';
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.row{
+  display: flex;
+  width: 100vw;
+  padding: 2% 15%;
+  align-items: center;
+}
+
+.row img{
+  height: 10%;
+}
+
+.row img:first-of-type{
+  margin-left: 10%;
+}
+
+img{
+  margin-left: 5%;
+}
+
+.golden img{
+  transform: scale(1.2);
+}
+
+.silver img{
+  transform: scale(.9);
+}
+
+.silver .voka{
+  transform: scale(.5);
+}
+
+.bronze img{
+  transform: scale(.8);
+}
+
+.light{
+  margin-bottom: 5%;
+  opacity: .15;
+}
+
+.light img{
+  transform: scale(.7);
+}
+
+.golden h3{
+  color: rgb(223, 171, 0);
+}
+
+.silver h3{
+  color: rgb(161, 161, 161);
+}
+
+.bronze h3{
+  color: rgb(65, 45, 0);
+}
+
+.light h3{
+  color: rgb(194, 194, 194);
+}

@@ -1,0 +1,95 @@
+.practical{
+  position: relative;
+  min-height: 100vh;
+  padding: 10% 15% 0 15%;
+}
+
+.practical h1{
+  margin: 0 0 1% 0;
+  font-size: 2.5em;
+}
+
+.practical p{
+  line-height: 1.5em;
+}
+
+/* BUTTON */
+
+.dropdown {
+  z-index: 5;
+  position: relative;
+  user-select: none;
+}
+
+.locationBtn {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  margin: 0;
+  transition: all .5s;
+}
+
+.locationBtn p {
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  
+  padding: 15px 40px;
+  background-color: rgba(32, 30, 37, 0.548);
+  backdrop-filter: blur(16px);
+  transition: all .5s;
+}
+
+#dropdownContent{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  right: 0;
+  top: 50px;
+  width: 20%;
+  transition: all .1s;
+}
+
+.dropdown .dropdownContent p{
+  padding: 15px 40px;
+  text-align: center;
+  right: 0;
+  top: 5%;
+  background-color: rgba(15, 15, 15, 0.548);
+  backdrop-filter: blur(16px);
+  z-index: 1;
+  margin: 0;
+  transition: all .5s;
+}
+
+.dropdown .dropdownContent p:hover{
+  cursor: pointer;
+  background-color: rgba(44, 44, 44, 0.548);
+}
+
+.locationBtn p:hover {
+  background-color: rgba(88, 88, 88, 0.466);
+  backdrop-filter: blur(16px);
+  color: #101010;
+  cursor: pointer;
+}
+
+
+/* MAP */
+
+.map{
+  height: 100vh;
+  margin-top: 5%;
+}
+
+.map p{
+  margin-bottom: 5px;
+}
+
+.mapIframe{
+  width: 100%;
+  height: 75%;
+  border: 0;
+}

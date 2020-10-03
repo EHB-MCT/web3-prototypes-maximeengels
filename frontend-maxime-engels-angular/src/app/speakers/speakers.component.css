@@ -1,0 +1,82 @@
+.speaker {
+  position: relative;
+  min-height: 90vh;
+  padding-top: 10%;
+  margin: 0 15% 2% 15%;
+}
+
+.backBtn{
+  position: absolute;
+  transform: rotateZ(-90deg);
+  width: 10%;
+  left: -7vw;
+  top: 50vh;
+  text-align: center;
+  font-weight: 400;
+  padding: 15px 20px;
+  background-color: rgb(32, 30, 37);
+  transition: background-color .3s, color .3s;
+}
+
+.backBtn:hover{
+  cursor: pointer;
+  color: rgb(74, 71, 80);
+  background-color: rgb(22, 20, 29);
+}
+
+.speaker h1{
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.speaker p{
+  margin: 5px 0;
+}
+
+.row{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.image{
+  margin-top: 5%;
+  width: fit-content;
+  display: inline-block;
+}
+
+.sideInfo{
+  width: fit-content;
+  display: inline-block;
+  margin: 0 0 12% 2%;
+}
+
+.icons{
+  width: fit-content;
+  transform: scale(.7);
+}
+
+.right h2{
+  font-family: 'fira sans';
+  font-weight: 400;
+  font-size: 1.8em;
+  margin-bottom: 5%;
+}
+
+.right p{
+  font-weight: 300;
+  line-height: 2em;
+}
+
+.right{
+  width: 40%;
+  padding: 12% 0% 12% 6%;
+}
+
+.right img{
+  position: absolute;
+  right: 0;
+  height: 38vh;
+  bottom: 18%;
+  z-index: -3;
+  opacity: .2;
+}

@@ -1,0 +1,67 @@
+<div class="programPage">
+  <div class="program">
+    <h1>
+      PROGRAM
+    </h1>
+    <div class="timelineBg">
+      <div class="timeline">
+        <div class="timebox">
+          <p>9H30</p>
+          <p class="sideText">Coffee</p>
+          <div class="lowerTlInfo">
+          </div>
+        </div>
+        <div class="timebox speakers" *ngFor="let speaker of speakers; let i=index;">
+          <p>{{speakers[i].beginhour}}</p>
+          <p class="sideText">{{speakers[i].endhour}}</p>
+          <div class="lowerTlInfo">
+            <p>{{speakers[i].name}}</p>
+            <p>{{speakers[i].job}}</p>
+            <p class="sideText">{{speakers[i].description}}</p>
+            <h3 class="hallInfo">{{speakers[i].hall}}</h3>
+            <img routerLink="/speakers/{{i}}" routerLinkActive="active" src="{{speakers[i].backpic}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keySpeakers">
+    <h1>
+      CONFERENCES
+    </h1>
+    <div class="lineupRow">
+      <div class="speakersLineup" *ngFor="let speaker of speakers; let i=index;">
+        <img routerLink="/speakers/{{i}}" routerLinkActive="active" src="{{speakers[i].frontpic}}" alt="">
+        <div class="lineupText">
+          <p>{{speakers[i].name}}</p>
+          <p>{{speakers[i].job}}</p>
+          <p class="sideText">{{speakers[i].description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="coaching">
+    <h1>
+      COACHING SESSIONS
+    </h1>
+    <div class="coachingContainer">
+      <div class="infoBtnWrap">
+        <div class="coachingInfo">
+          <p>Work together with one of the experts!</p>
+          <p class="sideText">You'll be able to learn a lot from them <br> as you work on a specific project</p>
+        </div>
+        <div class="signUp">
+          <div routerLink="/tickets" routerLinkActive="active" class="signUpBtn">
+            <p>SIGN UP</p>
+          </div>
+        </div>
+      </div>
+      <div class="coachImg">
+          <img src="assets/jpg/otherImg/coachingImg.jpg" alt="">
+        </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+.about{
+  position: relative;
+  min-height: 100vh;
+  padding: 10% 15% 0 15%;
+}
+
+.about h1{
+  margin: 0 0 1% 0;
+  font-size: 2.5em;
+}
+
+.about h2{
+  font-family: 'fira sans';
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  margin-top: 3%;
+  width: 50%;
+}
+
+.column p{
+  line-height: 2.3em;
+  width: 100%;
+}
+
+.column img{
+  position: absolute;
+  left: 10%;
+  height: 55vh;
+  bottom: 12%;
+  z-index: -3;
+  opacity: .15;
+}
+
+.right{
+  margin-top: 7%;
+  margin-left: 20%;
+}
+
+.teamAbout{
+  margin: 30% 0;
+}

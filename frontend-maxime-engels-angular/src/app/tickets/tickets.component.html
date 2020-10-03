@@ -1,0 +1,79 @@
+<div class="ticketsPage">
+  <h1>GET YOUR TICKETS</h1>
+  <div class="tickets">
+    <div class="ticketWrap" *ngFor="let ticket of tickets; let i=index;">
+      <div (click)="updateCount($event)" class="ticket" id="{{tickets[i].typesmall}}">
+        <div class="topTicket">
+          <h2>{{tickets[i].type}}</h2>
+          <h1>€{{tickets[i].price}}</h1>
+        </div>
+        <div class="bottomTicket">
+          <p>{{tickets[i].text}}</p>
+          <h3>BUY TICKETS</h3>
+        </div>
+      </div>
+    </div>
+    <div class="underTicketBtn">
+      <p class="student">STUDENTS & TEACHERS</p>
+      <div class="leftTotal">
+        <p>*students and teachers enter <span style="font-weight: 400;">FREE</span></p>
+      </div>
+    </div>
+    <div class="checkout">
+      <div class="ticketCheckWrap">
+        <div class="ticketCheck" *ngFor="let ticket of tickets; let i=index;">
+          <div class="leftText">
+            <p>{{tickets[i].type}}</p>
+            <p class="sideText">€{{tickets[i].price}}</p>
+          </div>
+          <div class="rightText">
+            <p (click)="deleteCount($event)" class="btn min" id="{{tickets[i].typesmall}}">-</p>
+            <p class="amount" id="amount">{{getCount(i)}}</p>
+            <p (click)="updateCount($event)" class="btn plus" id="{{tickets[i].typesmall}}">+</p>
+          </div>
+        </div>
+      </div>
+      <div class="lowerCheckWrap">
+        <div class="lowerCheck">
+          <div class="leftTotal">
+            <p>*groups of 6 or more people have a <span style="font-weight: 400;">10% discount</span></p>
+          </div>
+          <div class="rightTotal">
+            <p class="totalBorder">TOTAL</p>
+            <p>{{getTotalNoDisc()}} EUR<span id="discountText">{{showDiscount()}}</span></p>
+            <p class="total" id="total">{{getTotal()}} EUR</p>
+            <div class="checkoutBtn">
+              <p class="student">CHECKOUT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="coaching">
+    <h1>COACHING SESSIONS</h1>
+    <div class="coachingContainer">
+      <div class="infoBtnWrap">
+        <div class="coachingInfo">
+          <p>Work together with one of the experts!</p>
+          <p class="sideText">You'll be able to learn a lot from them <br> as you work on a specific project</p>
+        </div>
+      </div>
+      <div class="coachImg">
+        <img src="assets/jpg/otherImg/coachingImg.jpg" alt="">
+      </div>
+    </div>
+    <div class="form">
+      <form class="inputStyle" action="/action_page.php">
+        <p>Name:</p>
+        <input type="text" id="name" placeholder="Enter your name here" name="email">
+        <p>Last Name:</p>
+        <input type="text" id="name" placeholder="Enter your last name here" name="email">
+        <p>Email:</p>
+        <input type="email" id="email" placeholder="Enter your email here" name="email">
+        <input type="submit" id="submit" value="SUBMIT">
+      </form>
+    </div>
+  </div>
+</div>

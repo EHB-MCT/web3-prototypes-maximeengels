@@ -1,0 +1,235 @@
+
+.programPage {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10%;
+}
+
+.programPage h1{
+  margin: 0 15% 2% 15%;
+  font-size: 2.5em;
+}
+
+.timelineBg{
+  display: grid;
+  width: 50vh;
+  height: 100vw;
+  top: -6%;
+  grid-template-columns: repeat(7, 100%);
+
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+  background: rgb(16,16,16);
+  background: linear-gradient(-50deg, rgb(27, 20, 32) 0%, rgb(15, 10, 22) 49%, #0f0f0f 95%);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.timeline{
+  display: flex;
+  flex-direction: row;
+  margin: 61% 0 4% 15%;
+  width: 200vw;
+  height: 19%;
+
+  transform: rotate(90deg) translateY(-30vh);
+  transform-origin: top left;
+}
+
+.timebox{
+  height: calc(100vh - 31em);
+  width: 10%;
+  border-left: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.timebox p, .lowerTlInfo h3{
+  margin: 0;
+  padding-left: 18px;
+  left: 0;
+}
+
+.speakers{
+  width: 500px;
+}
+
+p:first-child{
+  font-weight: 400;
+}
+
+.lowerTlInfo{
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  padding-top: 10%;
+  height: 80%;
+
+  border-top: 2px solid;
+  border-color: rgb(84, 0, 255);
+}
+
+.lowerTlInfo img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  filter: blur(3px);
+  transition: all .4s;
+}
+
+.lowerTlInfo img:hover{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(1.2);
+  opacity: 0.2;
+  filter: blur(0px);
+  cursor: pointer;
+}
+
+.lowerTlInfo p, .lowerTlInfo h3{
+  position: relative;
+  cursor: default;
+  line-height: 1.7em;
+  width: fit-content;
+  z-index: 2;
+}
+
+.lowerTlInfo .hallInfo{
+  margin-top: 15%;
+  color: #EBEBEB;
+}
+
+/* ================================CONFERENCES============================= */
+
+.keySpeakers{
+  margin-top: 45%;
+  height: 90vh;
+  width: 100vw;
+}
+
+.lineupRow{
+  display: flex;
+  margin: 7%;
+}
+
+.speakersLineup{
+  width: fit-content;
+  flex: 10%;
+  padding-left: 1%;
+  filter: blur(3px);
+  transition: all .6s;
+}
+
+.speakersLineup:hover{
+  transform: scale(1.4);
+  filter: blur(0px);
+  z-index: 6;
+  cursor: pointer;
+}
+
+.speakersLineup img{
+  width: 100%;
+}
+
+.lineupText{
+  font-size: .7em;
+}
+
+/* ================================COACHING SESSIONS============================= */
+
+.coaching{
+  height: 80vh;
+  width: 100vw;
+}
+
+.coaching h1{
+  text-align: center;
+}
+
+.coachingContainer{
+  margin-top: 9%;
+  margin-left: 30%;
+  display: flex;
+}
+
+.infoBtnWrap{
+  width: fit-content;
+}
+
+.coachingInfo {
+  z-index: 4;
+  width: fit-content;
+  padding: 5px 18px;
+  min-height: 13vh;
+  border-right: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.coachingInfo p{
+  text-align: right;
+  margin-bottom: 0;
+  line-height: 1.7em;
+}
+
+.coachingInfo .sideText{
+  margin-top: 3px;
+}
+
+/* BUTTON */
+
+.signUp {
+  position: relative;
+  margin-top: 10%;
+}
+
+.signUpBtn {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  transition: width .5s;
+}
+
+.signUpBtn p {
+  text-align: center;
+  font-weight: 400;
+  padding: 15px 40px;
+  border: 1px solid #EBEBEB;
+  transition: background-color .5s, color .5s;
+}
+
+.signUpBtn p:hover {
+  background-color: #EBEBEB;
+  color: #101010;
+  cursor: pointer;
+}
+
+.signUpBtn:hover{
+  width: 70%;
+}
+
+/* IMAGE */
+
+.coachImg{
+  position: absolute;
+  z-index: -1;
+  right: 20%;
+  margin-top: -5%;
+}
+
+.coachImg img{
+  max-width: 100%;
+  opacity: .2;
+}

@@ -1,0 +1,78 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  z-index: 999;
+}
+
+.nav {
+  padding: 30px 40px 0 40px;
+}
+
+.left-align-nav,
+.right-align-nav {
+  width: 25%;
+}
+
+.left-align-nav button{
+    border: none;
+    background: none;
+}
+
+.left-align-nav button:hover{
+    cursor: pointer;
+}
+
+.menuBtn svg{
+  transition: all .5s;
+}
+
+.menuBtn svg:hover{
+  transform: scaleX(1.3);
+}
+
+.center-align-nav {
+  width: 50%;
+  margin: auto;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  width: 8rem;
+  transition: all .4s;
+}
+
+.logo:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.getTicketsBtn{
+    width: 60%;
+    float: right;
+    transition: width .5s;
+}
+
+.getTicketsBtn p{
+    text-align: center;
+    font-weight: 400;
+    padding: 15px 40px;
+    border: 1px solid #EBEBEB;
+    transition: background-color .4s, color .4s;
+}
+
+.getTicketsBtn:hover{
+    width: 65%;
+}
+
+.getTicketsBtn p:hover{
+    background-color: #EBEBEB;
+    color: #101010;
+    cursor: pointer;
+}

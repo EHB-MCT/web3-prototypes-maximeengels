@@ -1,0 +1,349 @@
+.ticketsPage{
+  position: relative;
+  min-height: 100vh;
+  padding: 7% 8% 0 15%;
+}
+
+.ticketsPage h1{
+  margin: 0 0 1% 0;
+  font-size: 2.5em;
+}
+
+.tickets{
+  display: flex;
+  margin-top: 4%;
+}
+
+.ticket{
+  text-align: center;
+  height: 45vh;
+  width: 14vw;
+  border: 1px solid #EBEBEB;
+  padding: 5%;
+  margin-right: 3vw;
+  transition: all .4s;
+}
+
+.ticket:hover{
+  cursor: pointer;
+  background: rgb(16,16,16);
+  background: linear-gradient(-50deg, rgb(35, 18, 47) 0%, rgb(20, 13, 29) 49%, #0f0f0f 95%);
+  color: #e941ff;
+  height: 47vh;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.topTicket{
+  padding: 15% 0;
+  border-bottom: 1px dashed #EBEBEB;
+}
+
+.topTicket h2{
+  font-size: 1.7em;
+}
+
+.topTicket h1, .topTicket h2{
+  font-family: 'fira sans';
+  font-weight: 600;
+  letter-spacing: .2em;
+}
+
+.bottomTicket{
+  position: relative;
+  padding: 15% 0;
+  height: 32%;
+}
+
+.bottomTicket h3{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-family: 'fira sans';
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+/* ==========================CHECKOUT============================ */
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.ticketCheckWrap{
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(50deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.ticketCheckWrap p{
+  margin: 0;
+}
+
+.ticketCheck{
+  display: flex;
+  background-color: #15121f;
+  
+  justify-content: space-between;
+  padding: 5%;
+  margin-bottom: 5%;
+}
+
+.leftText{
+  width: 50%;
+  padding-top: 2%;
+}
+
+.rightText{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  float: right;
+  padding: 3% 0;
+}
+
+.rightText p{
+  justify-content: center;
+  margin-left: 10%;
+  font-size: 1.1em;
+  width: 20%;
+}
+
+.rightText .btn{
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: all .2s;
+}
+
+.rightText .btn:hover{
+  cursor: pointer;
+  color: #af13df;
+}
+
+/* LOWER CHECKOUT */
+
+.lowerCheckWrap{
+  width: 100%;
+  height: fit-content;
+}
+
+.lowerCheck{
+  display: flex;
+  margin-top: 5%;
+}
+
+.lowerCheck p{
+  margin: 0;
+}
+
+.leftTotal{
+  width: 70%;
+  padding-right: 30%;
+}
+
+.leftTotal p{
+  font-size: .8em;
+}
+
+.rightTotal{
+  width: 30%;
+}
+
+.rightTotal p{
+  text-align: right;
+}
+
+.rightTotal .totalBorder{
+  font-size: 1.2em;
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+#discountText{
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 3px;
+  font-size: .8em;
+}
+
+.total{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+/* UNDER TICKETS */
+
+.underTicketBtn{
+  position: absolute;
+  width: 13%;
+  float: right;
+  top: 78vh;
+  transition: width .5s;
+}
+
+.underTicketBtn .student{
+  text-align: center;
+  font-weight: 400;
+  font-size: .9em;
+  padding: 15px 20px;
+  border: 1px solid #EBEBEB;
+  transition: background-color .4s, color .4s;
+}
+
+.underTicketBtn .student:hover{
+  background: rgb(16,16,16);
+  background: linear-gradient(-50deg, rgb(35, 18, 47) 0%, rgb(20, 13, 29) 49%, #0f0f0f 95%);
+  color: #e941ff;
+  cursor: pointer;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(50deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.checkoutBtn{
+  width: 150%;
+  margin-top: 15%;
+  float: right;
+  transition: all .5s;
+}
+
+.checkoutBtn .student{
+  text-align: center;
+  font-weight: 400;
+  font-size: .9em;
+  padding: 15px 20px;
+  border: 1px solid #EBEBEB;
+  transition: background-color .4s, color .4s;
+}
+
+.checkoutBtn .student:hover{
+  background-color: #EBEBEB;
+  color: #101010;
+  cursor: pointer;
+}
+
+.checkoutBtn:hover{
+  width: 170%;
+}
+
+/* ==========================COACHING============================ */
+
+.coaching{
+  margin-top: 40vh;
+  height: 80vh;
+}
+
+.coachingContainer{
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  float: left;
+}
+
+.infoBtnWrap{
+  width: fit-content;
+}
+
+.coachingInfo {
+  z-index: 4;
+  width: fit-content;
+  padding: 5px 18px;
+  min-height: 13vh;
+  border-right: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.coachingInfo p{
+  text-align: right;
+  margin-bottom: 0;
+  line-height: 1.7em;
+}
+
+.coachingInfo .sideText{
+  margin-top: 3px;
+}
+
+.coachImg{
+  position: absolute;
+  z-index: -1;
+  left: 15%;
+  margin-top: -5%;
+}
+
+.coachImg img{
+  width: 25vw;
+  opacity: .1;
+}
+
+/* FORM */
+
+.form{
+  width: 50%;
+  margin-top: 5%;
+  display: flex;
+  float: right;
+}
+
+.inputStyle{
+  width: 100%;
+}
+
+.inputStyle input{
+  padding: 15px 40px;
+  background-color: #17151b;
+}
+
+.inputStyle #name{
+  width: 30%;
+  border: none;
+  padding: 16px 20px;
+}
+
+.inputStyle #email{
+  width: 60%;
+  border: none;
+  padding: 16px 20px;
+}
+
+.inputStyle #submit{
+  text-align: center;
+  font-weight: 400;
+  border: 1px solid #EBEBEB;
+}
+
+input[type=text]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+}
+
+input[type=email]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+}
+
+input[type=submit]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+  transition: background-color .5s, color .5s;
+}
+
+input[type=submit]:hover{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  background-color: #EBEBEB;
+  color: #101010;
+  cursor: pointer;
+}

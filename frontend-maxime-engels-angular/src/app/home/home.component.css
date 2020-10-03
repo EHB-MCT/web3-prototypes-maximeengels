@@ -1,0 +1,194 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+}
+
+.attrImg {
+  width: 90%;
+  opacity: 1;
+  transition: all .8s;
+  position: fixed;
+  z-index: -1;
+  right: 5%;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.hide{
+  opacity: 0;
+}
+
+.introText {
+  position: relative;
+  width: fit-content;
+  padding-left: 18px;
+  margin-top: 50vh;
+  margin-left: 55%;
+
+  border-left: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.introText>p {
+  line-height: 1.6;
+}
+
+/* ===========================================CONFERENCES=========================================== */
+
+.firstConference {
+  margin: 20% 0 0 55%;
+  position: relative;
+  height: fit-content;
+}
+
+.conferences h1 {
+  font-size: 2.5em;
+  margin-bottom: 7%;
+}
+
+.backImg {
+  z-index: 2;
+  position: relative;
+  width: 30vw;
+}
+
+.frontImg {
+  position: absolute;
+  width: 12vw;
+  z-index: 5;
+  left: 40px;
+  bottom: -120px;
+  transition: all .3s;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.frontImg:hover {
+  transform: translateX(17px);
+  cursor: pointer;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.speakerInfo {
+  position: absolute;
+  z-index: 4;
+  left: 35%;
+  bottom: -120px;
+  width: 50%;
+  padding: 40px 0 5px 18px;
+  min-height: 13vh;
+  border-left: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.speakerInfo p {
+  margin: 0;
+  line-height: 2em;
+}
+
+.gridConference {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12%;
+}
+
+.gridConference .two {
+  margin-left: 10%;
+}
+
+.conference {
+  position: relative;
+}
+
+.conference .speakerInfo {
+  left: 52%;
+}
+
+/* ===========================================MEDIA=========================================== */
+
+.media{
+  display: block;
+  justify-content: center;
+  margin-top: 12%;
+  margin-bottom: 12%;
+  text-align: center;
+}
+
+.media h1 {
+  font-size: 2.5em;
+}
+
+.inputStyle input{
+  margin-top: 1%;
+  padding: 15px 40px;
+  background-color: #17151b;
+}
+
+.inputStyle .email{
+  width: 15%;
+  border: none;
+  padding: 16px 20px;
+}
+
+.inputStyle .submit{
+  text-align: center;
+  font-weight: 400;
+  border: 1px solid #EBEBEB;
+}
+
+input[type=submit]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+  transition: background-color .5s, color .5s;
+}
+
+input[type=submit]:hover{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  background-color: #EBEBEB;
+  color: #101010;
+  cursor: pointer;
+}
+
+input[type=email]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+}
+
+/* ===========================================FULL PROGRAM=========================================== */
+
+.fullProgram {
+  display: block;
+  margin-top: 15%;
+}
+
+.fullProgramBtn {
+  width: 15%;
+  margin: auto;
+  transition: width .5s;
+}
+
+.fullProgramBtn p {
+  text-align: center;
+  font-weight: 400;
+  padding: 15px 40px;
+  border: 1px solid #EBEBEB;
+  transition: background-color .5s, color .5s;
+}
+
+.fullProgramBtn p:hover {
+  background-color: #EBEBEB;
+  color: #101010;
+  cursor: pointer;
+}
+
+.fullProgramBtn:hover{
+  width: 18%;
+}
+
