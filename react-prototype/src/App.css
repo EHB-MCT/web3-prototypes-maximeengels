@@ -1,38 +1,100 @@
-.App {
+.app {
+  background: #202020;
+  height: 100vh;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.wrapper {
+  padding-top: 30vh;
+}
+
+.headers {
+  color: #f5f5f5;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headers h1 {
+  font-weight: 900;
+  font-size: 2.6em;
+  margin: 0;
+  background-color: rgb(195, 19, 194);
+
+  background-image: linear-gradient(317deg, rgba(195, 19, 194, 1) 0%, rgba(111, 31, 240, 1) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headers h3 {
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.todo-list {
+  background: #e8e8e8;
+  margin: auto;
+  border-radius: 4px;
+  max-width: 500px;
+  padding: 15px;
+}
+
+.todo {
   align-items: center;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  padding: 9px 15px;
+}
+
+.buttons button {
+  font-size: 12px;
+  padding: 6px 10px;
+  margin-left: 9px;
+  border: none;
+  background-color: rgb(243, 243, 243);
+}
+
+.buttons button:last-child {
+  background-color: rgb(247, 220, 253);
+}
+
+form {
+  margin-top: 15px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form input {
+  border: none;
+  padding: 10px 15px;
+  width: 50%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  text-align: center;
+  color: #e8e8e8;
+  font-size: 13px;
+  font-weight: 200;
 }
