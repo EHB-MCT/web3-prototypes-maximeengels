@@ -27,7 +27,7 @@ function TodoForm({ addTodo }) {
   return (
     <form onSubmit={handleSubmit}>
       <motion.input
-        whileHover={{ scale: 1.05, cursor: "pointer" }}
+        whileHover={{ width: "100%" , cursor: "pointer" }}
         type="text"
         className="input"
         placeholder="New item here"
@@ -72,6 +72,16 @@ function App() {
           <h1>Hi, this is a to-do list.</h1>
           <h3>Now delete everything and do whatever :)</h3>
         </div>
+        <div className="logo">
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <path d="M9.8889,1V9.8889H1V1H9.8889m1-1H0V10.8889H10.8889V0Z" transform="translate(0 0)"/>
+            <line x1="14.8889" y1="5.4444" x2="48" y2="5.4444" fill="none"/>
+            <path d="M9.8889,19.5556v8.8888H1V19.5556H9.8889m1-1H0V29.4444H10.8889V18.5556Z" transform="translate(0 0)"/>
+            <line x1="14.8889" y1="24" x2="48" y2="24" fill="none"/>
+            <path d="M9.8889,38.1111V47H1V38.1111H9.8889m1-1H0V48H10.8889V37.1111Z" transform="translate(0 0)"/>
+            <line x1="14.8889" y1="42.5556" x2="48" y2="42.5556" fill="none"/>
+          </svg>
+        </div>
         <div className="todo-list">
           {todos.map((todo, index) => (
             <Todo
@@ -85,6 +95,7 @@ function App() {
           <TodoForm addTodo={addTodo} />
         </div>
         <footer><p>A Framer Motion and React prototype</p></footer>
+        {/* <div className="bg"></div> */}
       </div>
     </div>
   );
