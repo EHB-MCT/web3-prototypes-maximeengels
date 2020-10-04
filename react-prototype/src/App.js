@@ -7,8 +7,8 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
     <div className="todo" style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}>
       {todo.text}
       <div className="buttons">
-        <button onClick={() => completeTodo(index)}>Complete</button>
-        <button onClick={() => removeTodo(index)}>x</button>
+        <motion.button whileHover={{ scale: 1.1, backgroundColor: "#9BE60E", color: "smokeyblack", cursor: "pointer" }} whileTap={{ scale: 0.9, backgroundColor: "#B5E678" }} onClick={() => completeTodo(index)}>Complete</motion.button>
+        <motion.button whileHover={{ scale: 1.1, backgroundColor: "#B02727", color: "white", cursor: "pointer" }} whileTap={{ scale: 0.9, backgroundColor: "#F0A4A1", borderRadius: 50 }} onClick={() => removeTodo(index)}>x</motion.button>
       </div>
     </div>
   );
@@ -26,7 +26,8 @@ function TodoForm({ addTodo }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <motion.input
+        whileHover={{ scale: 1.05, cursor: "pointer" }}
         type="text"
         className="input"
         placeholder="New item here"

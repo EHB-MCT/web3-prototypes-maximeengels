@@ -13,6 +13,7 @@
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  
 }
 
 .wrapper {
@@ -67,6 +68,8 @@
 }
 
 .buttons button {
+  outline: none;
+  border-radius: 0;
   font-size: 12px;
   padding: 6px 10px;
   margin-left: 9px;
@@ -75,7 +78,7 @@
 }
 
 .buttons button:last-child {
-  background-color: rgb(247, 220, 253);
+  background-color: #EEBDC1;
 }
 
 form {
@@ -85,6 +88,7 @@ form {
 }
 
 form input {
+  outline: none;
   border: none;
   padding: 10px 15px;
   width: 50%;
