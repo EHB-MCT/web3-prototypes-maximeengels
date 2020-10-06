@@ -2,24 +2,36 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { DatabaseService } from 'src/app/database.service';
 import {Howl, Howler} from 'howler';
+import { faCaretLeft, faPlay, faPause, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  faCaretLeft = faCaretLeft;
+  faPlay = faPlay;
+  faPause = faPause;
+  faCaretRight = faCaretRight;
 
   speakers: Array<any>;
-  sound: Const<any>;
+  // sound: Const<any>;
 
   playAudio() {
     // Setup the new Howl.
     const sound = new Howl({
       src: ['assets/audio/sound.mp3']
     });
+    console.log(sound);
     console.log("Left Click aka Play");
+    const songId = sound.play();
     // Play the sound.
-    sound.play();
+
+    if (!sound.playing(songId)){
+      sound.once('load', function(){
+        sound.play(songId);
+      });
+    }
 
     // Change global volume.
     Howler.volume(0.5);
@@ -27,7 +39,7 @@ export class HomeComponent implements OnInit {
 
   muteAudio(){
     console.log("Right Click aka Stop");
-    stop();
+    Howler.stop();
   }
 
   constructor(@Inject(DOCUMENT) private document: Document,

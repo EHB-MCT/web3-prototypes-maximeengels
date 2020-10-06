@@ -37,6 +37,48 @@
   line-height: 1.6;
 }
 
+/* ===========================================AUDIO=========================================== */
+
+.musicControls{
+  height: 50px;
+  display: flex;
+  justify-content: left;
+}
+
+.audioCtrl{
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.musicControls span{
+  width: 30px;
+  justify-content: center;
+  transition: all .3s;
+}
+
+.musicControls span:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.arrow{
+  font-size: 35px;
+  color: #818181;
+}
+
+.arrow:hover{
+  color: #ececec;
+}
+
+.playPause{
+  font-size: 20px;
+}
+
+.playPause:hover{
+  color: rgb(105, 57, 187);
+}
+
 /* ===========================================CONFERENCES=========================================== */
 
 .firstConference {

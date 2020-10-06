@@ -1,4 +1,4 @@
-<div class="home" (click)= "playAudio()">
+<div class="home">
   <img class="attrImg" id="attrImgId" src="../../assets/png/attractionPng.png" alt="intro graphic">
   <div class="introText">
     <p>Oct 2nd 2020 <br>
@@ -7,10 +7,16 @@
     <p class="sideText">A design & technology conference <br>
       made for creative minds with a vision <br>
       for the future</p>
+      <div class="musicControls">
+        <span class="audioCtrl arrow"><fa-icon [icon]="faCaretLeft"></fa-icon></span>
+        <span class="audioCtrl playPause" (click)= "playAudio()"><fa-icon class="play" [icon]="faPlay"></fa-icon></span>
+        <span class="audioCtrl playPause" (click)="muteAudio()"><fa-icon class="pause" [icon]="faPause"></fa-icon></span>
+        <span class="audioCtrl arrow"><fa-icon [icon]="faCaretRight"></fa-icon></span>
+      </div>
   </div>
   <div class="conferences">
     <div class="firstConference">
-      <h1 (contextmenu)="muteAudio()">CONFERENCES</h1>
+      <h1>CONFERENCES</h1>
       <img class="backImg" src="{{speakers[0].backpic}}" alt="">
       <img routerLink="/speakers/0" routerLinkActive="active" class="frontImg" src="{{speakers[0].frontpic}}" alt="">
       <div class="speakerInfo">
@@ -71,3 +77,4 @@
       </a>
     </div>
   </div>
+
