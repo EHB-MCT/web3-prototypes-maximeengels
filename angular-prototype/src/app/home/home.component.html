@@ -1,4 +1,4 @@
-<div class="home">
+<div class="home" (click)= "playAudio()">
   <img class="attrImg" id="attrImgId" src="../../assets/png/attractionPng.png" alt="intro graphic">
   <div class="introText">
     <p>Oct 2nd 2020 <br>
@@ -10,7 +10,7 @@
   </div>
   <div class="conferences">
     <div class="firstConference">
-      <h1>CONFERENCES</h1>
+      <h1 (contextmenu)="muteAudio()">CONFERENCES</h1>
       <img class="backImg" src="{{speakers[0].backpic}}" alt="">
       <img routerLink="/speakers/0" routerLinkActive="active" class="frontImg" src="{{speakers[0].frontpic}}" alt="">
       <div class="speakerInfo">

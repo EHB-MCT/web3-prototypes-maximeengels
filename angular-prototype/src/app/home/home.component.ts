@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { DatabaseService } from 'src/app/database.service';
+import {Howl, Howler} from 'howler';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,6 +10,25 @@ import { DatabaseService } from 'src/app/database.service';
 export class HomeComponent implements OnInit {
 
   speakers: Array<any>;
+  sound: Const<any>;
+
+  playAudio() {
+    // Setup the new Howl.
+    const sound = new Howl({
+      src: ['assets/audio/sound.mp3']
+    });
+    console.log("Left Click aka Play");
+    // Play the sound.
+    sound.play();
+
+    // Change global volume.
+    Howler.volume(0.5);
+  }
+
+  muteAudio(){
+    console.log("Right Click aka Stop");
+    stop();
+  }
 
   constructor(@Inject(DOCUMENT) private document: Document,
               private databaseService: DatabaseService
