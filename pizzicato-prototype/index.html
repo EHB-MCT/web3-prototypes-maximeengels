@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <video src="assets/video/bgVideo.mp4" autoplay loop playsinline muted></video>
+  <div class="wrapper">
+    <h1>An Audio Interactive Prototype.</h1>
+    <h3>SOUNDCLOUD EMBEDDED</h3>
+    <div class="soundcloud">
+      <iframe width="46%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1141309666%3Fsecret_token%3Ds-mj9AoVsuwIc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <iframe width="46%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2816402&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    <div class="effectContainer">
+      <h2 id="convolver">Pizzicato.js Library</h2>
+      <h4 id="convolver">CONVOLVER EFFECT</h4>
+      <pre><code class="language-javascript">
+        var convolver = new Pizzicato.Effects.Convolver({
+            impulse: 'assets/audio/sound.mp3',
+            mix: 0.5
+        }, function(error) {
+            sound.addEffect(convolver);
+            sound.play();
+        });
+        </code></pre>
+
+      <div class="slider-group">
+        <div class="slider">
+          <label for="volume-drums">Volume</label>
+          <input type="range" min="0" max="1" step="0.01" value="1" id="volume-drums" />
+          <div class="slider-value">1</div>
+        </div>
+        <div class="slider">
+          <label for="convolver-mix">Mix</label>
+          <input type="range" min="0" max="1" step="0.01" value="0.5" id="convolver-mix" />
+          <div class="slider-value">0.5</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="play-drums" class="play btn">PLAY</button>
+        <button id="play-drums" class="pause btn">PAUSE</button>
+        <button id="stop-drums" class="stop btn">STOP</button>
+      </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
