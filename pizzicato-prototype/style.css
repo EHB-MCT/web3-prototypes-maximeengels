@@ -43,6 +43,7 @@ h2{
 }
 
 h3, h4{
+  color: #ff5500;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 200;
@@ -77,4 +78,20 @@ h3, h4{
 
 .slider div{
   font-weight: 200;
+}
+
+.btn{
+  padding: 8px 15px;
+  border: 0;
+  font-size: .7em;
+  font-weight: 200;
+  background-color: #ec5002;
+  color: rgb(246, 246, 246);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  background-color: #ff9159;
+  cursor: pointer;
 }
