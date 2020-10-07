@@ -64,12 +64,25 @@ h3, h4{
 }
 
 .slider-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2vh;
+  width: 20vw;
 }
 
 .slider{
+  padding: 5px 25px;
+  width: 15vw;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+}
+
+.align{
+  width: 70%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .slider label{

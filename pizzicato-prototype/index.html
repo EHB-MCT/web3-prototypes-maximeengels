@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- <video src="assets/video/bgVideo.mp4" autoplay loop playsinline muted></video> -->
+  <video src="assets/video/bgVideo.mp4" autoplay loop playsinline muted></video>
   <div class="wrapper">
     <h1>An Audio Interactive Prototype.</h1>
     <h3>SOUNDCLOUD EMBEDDED</h3>
@@ -36,20 +36,24 @@
       <div class="slider-group">
         <div class="slider">
           <label for="volume-drums">Volume</label>
-          <input type="range" min="0" max="1" step="0.01" value="1" id="volume-drums" />
-          <div class="slider-value">1</div>
+          <div class="align">
+            <input type="range" min="0" max="1" step="0.01" value="0.5" id="volume" />
+            <div class="volText">0.5</div>
+          </div>
         </div>
         <div class="slider">
           <label for="convolver-mix">Mix</label>
-          <input type="range" min="0" max="1" step="0.01" value="0.5" id="convolver-mix" />
-          <div class="slider-value">0.5</div>
+          <div class="align">
+            <input type="range" min="0" max="1" step="0.01" value="0.5" id="convolver-mix" />
+            <div class="mixText">0.5</div>
+          </div>
         </div>
       </div>
 
       <div class="controls">
-        <button id="play-drums" class="play btn">PLAY</button>
-        <button id="play-drums" class="pause btn">PAUSE</button>
-        <button id="stop-drums" class="stop btn">STOP</button>
+        <button id="play-drums" class="play btn" onclick="playMusic()">PLAY</button>
+        <button id="play-drums" class="pause btn" onclick="pauseMusic()">PAUSE</button>
+        <button id="stop-drums" class="stop btn" onclick="stopMusic()">STOP</button>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.js"></script>
