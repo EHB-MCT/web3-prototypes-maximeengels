@@ -2,7 +2,7 @@ var volumeValue = document.querySelector("#volume");
 var mixValue = document.querySelector("#convolver-mix");
 var volumeText = document.querySelector(".volText");
 var mixText = document.querySelector(".mixText");
-
+var mix = 0.5;
 
 var sound = new Pizzicato.Sound({
   source: 'file',
@@ -15,19 +15,20 @@ var sound = new Pizzicato.Sound({
 
 var convolver = new Pizzicato.Effects.Convolver({
   impulse: 'assets/audio/scala-milan.wav',
-  mix: mixValue.value
+  mix: 1
 }, function (error) {
 });
 sound.addEffect(convolver);
 
 volumeValue.oninput = function(){
-  console.log(this.value);
-  sound.volume = this.value;
+  console.log(Number.parseFloat(this.value).toFixed(1));
+  Pizzicato.volume = Number.parseFloat(this.value).toFixed(1);
   volumeText.innerHTML = this.value;
 }
 
 mixValue.oninput = function(){
   mixText.innerHTML = this.value;
+  convolver.mix = this.value;
 }
 
 function playMusic(){
