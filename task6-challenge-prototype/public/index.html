@@ -27,17 +27,27 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDvySSpxk_EHM_PJSFEQiz-ePoxyq3JLuY",
+        authDomain: "audio-challenge-webapp.firebaseapp.com",
+        databaseURL: "https://audio-challenge-webapp.firebaseio.com",
+        projectId: "audio-challenge-webapp",
+        storageBucket: "audio-challenge-webapp.appspot.com",
+        messagingSenderId: "854383862414",
+        appId: "1:854383862414:web:c245ce2b7457a77cde9fdf"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      </script>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

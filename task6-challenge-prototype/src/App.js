@@ -87,8 +87,6 @@ function App() {
         <footer><p>A Framer Motion, React and Howler.js prototype</p></footer>
         {/* <div className="bg"></div> */}
       </div>
-      <script src="/__/firebase/7.23.0/firebase-app.js"></script>
-      <script src="/__/firebase/init.js"></script>
     </div>
   );
 }
