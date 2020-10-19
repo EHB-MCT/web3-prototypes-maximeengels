@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
+import { storage } from './firebase';
 import { motion } from "framer-motion";
+import './App.css';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
