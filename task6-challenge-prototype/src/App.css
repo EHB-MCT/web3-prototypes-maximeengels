@@ -124,9 +124,10 @@
 }
 
 form {
-  margin-top: 15px;
+  margin-bottom: 4vh;
+  height: 10vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   color: #e8e8e8;
 }
 
@@ -134,15 +135,25 @@ form input {
   outline: none;
   border: none;
   padding: 10px 15px;
-  width: 20%;
+  
+  justify-content: center;
+  align-self: center;
   box-shadow: none;
   font-size: 12px;
 }
 
 .output {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.progress-bar{
+  height: 5px;
+  background: rgb(111, 207, 22);
+  margin-top: 20px;
 }
 
 footer {
