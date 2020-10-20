@@ -1,6 +1,8 @@
-import firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import 'firebase/storage';
+import 'firebase/firestore';
 
+// 
 const firebaseConfig = {
   apiKey: "AIzaSyDvySSpxk_EHM_PJSFEQiz-ePoxyq3JLuY",
   authDomain: "audio-challenge-webapp.firebaseapp.com",
@@ -11,8 +13,10 @@ const firebaseConfig = {
   appId: "1:854383862414:web:c245ce2b7457a77cde9fdf"
 };
 
+//initialize firebase
 firebase.initializeApp(firebaseConfig);
 
-const storage = firebase.storage();
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
 
-export { storage, firebase as default };
+export { projectStorage, projectFirestore};
