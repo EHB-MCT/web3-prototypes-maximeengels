@@ -1,13 +1,21 @@
 import React from 'react';
+import useFirestore from '../hooks/useFirestore';
 
-const AudioGrid = () => {
+const AudioGrid = ({ setSelectedImg }) => {
+
+  const { docs } = useFirestore('uploads');
+
   return (
     <div className="uploadGrid">
-      <h4>An Audio Challenge Webapp</h4>
-      <p>Made with FL Studio</p>
-      <audio controls>
-        <source src="https://firebasestorage.googleapis.com/v0/b/audio-challenge-webapp.appspot.com/o/uploads%2Fchallenge13.mp3?alt=media&token=fc1ca8fc-cee7-4e67-afed-e04e7c9754d4" type="audio/mpeg"/>
-      </audio>
+      {docs && docs.map(doc => (
+      <div key={doc.id} className="tile">
+        <h3>{doc.id}</h3>
+        <p>Made with FL Studio</p>
+          <audio controls>
+            <source src={doc.url} type="audio/mpeg"/>
+          </audio>
+      </div>
+      ))}
     </div>
   )
 }

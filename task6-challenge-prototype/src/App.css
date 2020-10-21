@@ -1,6 +1,6 @@
 .app {
   background: #202020;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -47,7 +47,8 @@
 }
 
 .wrapper {
-  padding-top: 30vh;
+  padding-top: 20vh;
+  min-height: 80vh;
 }
 
 .headers {
@@ -70,72 +71,29 @@
   -moz-text-fill-color: transparent;
 }
 
+.headers h2 {
+  margin-top: 5vh;
+  margin-bottom: 0;
+}
+
 .headers h3 {
   font-weight: 200;
   margin: 0;
 }
 
-.logo {
-  width: 3.5%;
-  padding: 1.5%;
-  margin: auto;
-}
-
-.logo svg path {
-  fill: #e8e8e8;
-}
-
-.logo svg line {
-  stroke: #e8e8e8;
-}
-
-.todo-list {
-  background: #e8e8e8;
-  margin: auto;
-  border-radius: 4px;
-  max-width: 500px;
-  padding: 15px;
-}
-
-.todo {
-  align-items: center;
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  display: flex;
-  font-size: 12px;
-  justify-content: space-between;
-  margin-bottom: 9px;
-  padding: 9px 15px;
-}
-
-.buttons button {
-  outline: none;
-  border-radius: 0;
-  font-size: 12px;
-  padding: 6px 10px;
-  margin-left: 9px;
-  border: none;
-  background-color: rgb(243, 243, 243);
-}
-
-.buttons button:last-child {
-  background-color: #EEBDC1;
-}
-
 form {
   margin-bottom: 4vh;
-  height: 10vh;
+  height: 5vh;
   display: flex;
   flex-direction: column;
   color: #e8e8e8;
+  text-align: center;
 }
 
 form input {
   outline: none;
   border: none;
-  padding: 10px 15px;
-  
+  padding-left: 50px;
   justify-content: center;
   align-self: center;
   box-shadow: none;
@@ -147,18 +105,57 @@ form input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
   width: 100%;
 }
 
-.progress-bar{
+.progress-bar {
   height: 5px;
   background: rgb(111, 207, 22);
   margin-top: 20px;
+  transition: all 1s;
+}
+
+.uploadGrid {
+  display: flex;
+  flex-wrap: wrap;
+  color: #e8e8e8;
+  padding: 0 20vw;
+  justify-content: space-evenly;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  margin-bottom: 2.5vh;
+  width: 15vw;
+  height: 20vh;
+  padding: 30px;
+}
+
+.tile h3, .tile p {
+  margin-top: 0;
+}
+
+.tile p {
+  margin-bottom: 3vh;
 }
 
 footer {
   text-align: center;
   color: #e8e8e8;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
   font-size: 13px;
   font-weight: 200;
+}
+
+footer p {
+  margin: 0;
+  padding-bottom: 30px;
 }
