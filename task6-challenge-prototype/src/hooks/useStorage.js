@@ -16,9 +16,11 @@ const useStorage = (file) => {
     }, (err) => {
       setError(err);
     }, async () => {
+      const string = file.name;
+      const name = string.slice(0, -4);
       const url = await storageRef.getDownloadURL();
       const createdAt = timestamp();
-      await collectionRef.add({ url, createdAt });
+      await collectionRef.add({ name, url, createdAt });
       setUrl(url);
     })
   }, [file]);

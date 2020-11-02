@@ -140,6 +140,10 @@ form input {
   margin-top: 0;
 }
 
+.challengeTitle {
+  text-transform: uppercase;
+}
+
 .tile p {
   margin-bottom: 3vh;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 
-const AudioGrid = ({ setSelectedImg }) => {
+const DetailHowler = ({ setSelectedImg }) => {
 
   const { docs } = useFirestore('uploads');
 
@@ -20,4 +20,4 @@ const AudioGrid = ({ setSelectedImg }) => {
   )
 }
 
-export default AudioGrid;
+export default DetailHowler;
