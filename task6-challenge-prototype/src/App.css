@@ -148,6 +148,33 @@ form input {
   margin-bottom: 3vh;
 }
 
+audio {
+  margin-bottom: 2vh;
+}
+
+.howler {
+  display: flex;
+}
+
+.howler button {
+  color: #202020;
+  background-color: rgb(111, 207, 22);
+  border: none;
+  padding: 10px 20px;
+  transition: all .3s;
+}
+
+.howler button:hover {
+  color: #202020;
+  background-color: rgb(177, 223, 134);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.pause {
+  margin-left: 2vw;
+}
+
 footer {
   text-align: center;
   color: #e8e8e8;

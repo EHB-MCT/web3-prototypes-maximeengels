@@ -13,7 +13,7 @@ function App() {
         <Title />
         <UploadForm />
         <AudioGrid />
-        <DetailHowler />
+        {/* <DetailHowler /> */}
         <footer><p>A Framer Motion, React and Howler.js prototype</p></footer>
         {/* <div className="bg"></div> */}
       </div>
