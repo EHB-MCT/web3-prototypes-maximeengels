@@ -26,11 +26,14 @@ const AudioGrid = ({ setSelectedImg }) => {
           </audio>
           <div className="howler">
             <ReactHowler
-              src={doc.url}
-              playing={true}
+              src='https://firebasestorage.googleapis.com/v0/b/audio-challenge-webapp.appspot.com/o/uploads%2Fchallenge21.mp3?alt=media&token=0a562d23-e592-4308-82fe-688d9fb66ee2'
+              playing= {state}
+              html5={true}
+              buffer={true}
+              // xhr={{ method: 'GET', headers: ('Access-Control-Allow-Origin', '*')}}
             />
-            <button onClick={handlePlay()} className="play">PLAY</button>
-            <button onClick={handlePause()} className="pause">PAUSE</button>
+            <button onClick={handlePlay} className="play">PLAY</button>
+            <button onClick={handlePause} className="pause">PAUSE</button>
           </div>
       </div>
       ))}

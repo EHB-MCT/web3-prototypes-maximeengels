@@ -160,6 +160,7 @@ audio {
   color: #202020;
   background-color: rgb(111, 207, 22);
   border: none;
+  border-radius: 5px;
   padding: 10px 20px;
   transition: all .3s;
 }
@@ -168,6 +169,7 @@ audio {
   color: #202020;
   background-color: rgb(177, 223, 134);
   cursor: pointer;
+  border-radius: 0;
   transform: scale(1.1);
 }
 

@@ -19,7 +19,7 @@ const DetailHowler = ({ setSelectedImg }) => {
     //   ))}
     // </div>
     <ReactHowler
-        src='https://firebasestorage.googleapis.com/v0/b/audio-challenge-webapp.appspot.com/o/uploads%2Fchallenge6.mp3?alt=media&token=21f9f2d8-d2f8-4ed4-86a8-cf3e10621469'
+        src='https://firebasestorage.googleapis.com/v0/b/audio-challenge-webapp.appspot.com/o/uploads%2Fchallenge8.mp3?alt=media&token=46f2cca9-2b1b-4674-a207-8c967b819359'
         playing={true}
       />
   )
