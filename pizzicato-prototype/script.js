@@ -3,6 +3,7 @@ var mixValue = document.querySelector("#convolver-mix");
 var volumeText = document.querySelector(".volText");
 var mixText = document.querySelector(".mixText");
 var mix = 0.5;
+var volume;
 
 var sound = new Pizzicato.Sound({
   source: 'file',
@@ -22,9 +23,11 @@ sound.addEffect(convolver);
 
 volumeValue.oninput = function(){
   console.log(Number.parseFloat(this.value).toFixed(1));
-  Pizzicato.volume = Number.parseFloat(this.value).toFixed(1);
+  console.log(volume);
+  volume = Number.parseFloat(this.value).toFixed(1);
   volumeText.innerHTML = this.value;
 }
+Pizzicato.volume = volume;
 
 mixValue.oninput = function(){
   mixText.innerHTML = this.value;
